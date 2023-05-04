@@ -20,11 +20,15 @@
     <img src="images/4.png" id="scenery-img" />
 
     <script>
+      // grab all images
       var backgroundImages = document.querySelectorAll('.background-img')
 
+      // add a click event listener to each image
       backgroundImages.forEach(function (backgroundImage) {
         backgroundImage.addEventListener('click', function () {
+          // get the src path of the clicked image
           var backgroundImageSrc = this.getAttribute('src')
+          // grab the background image we want to change, and replace the src path with the path for the clicked image
           document.getElementById('scenery-img').setAttribute('src', backgroundImageSrc)
         })
       })
